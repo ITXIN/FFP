@@ -1,0 +1,53 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "height" : 640,
+      "frames" : 40,
+      "looping" : 1,
+      "showTop" : 0,
+      "width" : 360,
+      "frameDuration" : 50,
+      "folderName" : "maikefeng",
+      "showUtilFinish" : 1,
+      "type" : "V",
+      "triggerType" : 2
+    },
+    {
+      "height" : 640,
+      "frames" : 40,
+      "looping" : 1,
+      "showTop" : 0,
+      "width" : 360,
+      "frameDuration" : 50,
+      "folderName" : "yinfu",
+      "showUtilFinish" : 1,
+      "type" : "V",
+      "triggerType" : 2
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 220,
+      "width" : 369,
+      "alignX" : 195,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "maozi",
+      "height" : 209,
+      "frames" : 40,
+      "scaleWidth" : 190,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        43
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "maikefeng",
+  "translateVersion" : 1
+}

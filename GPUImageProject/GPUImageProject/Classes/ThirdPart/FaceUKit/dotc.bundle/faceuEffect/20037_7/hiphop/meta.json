@@ -1,0 +1,68 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 30,
+      "width" : 206,
+      "alignX" : 103,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "glasses",
+      "height" : 75,
+      "frames" : 66,
+      "scaleWidth" : 170,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        43
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 140,
+      "width" : 298,
+      "alignX" : 120,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "hat",
+      "height" : 136,
+      "frames" : 66,
+      "scaleWidth" : 170,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        35,
+        40
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 20,
+      "width" : 243,
+      "alignX" : 122,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "necklace",
+      "height" : 268,
+      "frames" : 66,
+      "scaleWidth" : 170,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        16
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "hiphop",
+  "translateVersion" : 1
+}

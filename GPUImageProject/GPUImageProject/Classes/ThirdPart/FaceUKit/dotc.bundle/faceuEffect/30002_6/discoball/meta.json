@@ -1,0 +1,22 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "height" : 640,
+      "frames" : 44,
+      "looping" : 1,
+      "showTop" : 0,
+      "width" : 360,
+      "frameDuration" : 100,
+      "folderName" : "discoball",
+      "showUtilFinish" : 1,
+      "type" : "V",
+      "triggerType" : 2
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "discoball",
+  "translateVersion" : 1
+}

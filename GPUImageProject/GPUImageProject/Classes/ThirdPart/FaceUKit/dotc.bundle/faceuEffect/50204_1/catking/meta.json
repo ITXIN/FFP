@@ -1,0 +1,48 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 140,
+      "width" : 145,
+      "alignX" : 73,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "toufa",
+      "height" : 185,
+      "frames" : 24,
+      "scaleWidth" : 105,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        44
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 15,
+      "width" : 163,
+      "alignX" : 65,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "shou",
+      "height" : 213,
+      "frames" : 47,
+      "scaleWidth" : 120,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        16
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "catking",
+  "translateVersion" : 1
+}

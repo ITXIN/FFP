@@ -1,0 +1,67 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 100,
+      "width" : 360,
+      "alignX" : 180,
+      "type" : "D",
+      "frameDuration" : 65,
+      "folderName" : "hua",
+      "height" : 311,
+      "frames" : 39,
+      "scaleWidth" : 200,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        16
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 40,
+      "width" : 230,
+      "alignX" : 120,
+      "type" : "D",
+      "frameDuration" : 65,
+      "folderName" : "saihong",
+      "height" : 76,
+      "frames" : 20,
+      "scaleWidth" : 200,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        46
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 70,
+      "width" : 218,
+      "alignX" : 106,
+      "type" : "D",
+      "frameDuration" : 65,
+      "folderName" : "yanjing",
+      "height" : 121,
+      "frames" : 12,
+      "scaleWidth" : 200,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        43
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "gandong",
+  "translateVersion" : 1
+}

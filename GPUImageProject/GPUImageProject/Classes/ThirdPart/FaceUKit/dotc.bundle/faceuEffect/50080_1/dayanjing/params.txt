@@ -1,0 +1,1 @@
+{"itemList":[{"leftIndex":0,"width":258,"looping":1,"type":"D","frameDuration":40,"alignIndexLst":[43],"showUtilFinish":1,"height":115,"scaleWidth":220,"alignX":125,"alignY":50,"frames":30,"folderName":"dayanjing","rightIndex":32,"triggerType":2}]}

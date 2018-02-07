@@ -1,0 +1,221 @@
+{
+  "translateVersion" : 1,
+  "position" : 4000,
+  "sections" : [
+    {
+      "filterlist" : [
+        "strongman",
+        "sh",
+        "face",
+        "tear",
+        "ear",
+        "bee"
+      ],
+      "tips" : "",
+      "sectionname" : "bearcry",
+      "duration" : 0
+    }
+  ],
+  "filters" : [
+    {
+      "data" : {
+        "audioPlayMode" : 0,
+        "resloadtype" : 0,
+        "glsl" : "glsl",
+        "timeparam" : [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "foldername" : "strongman",
+        "resources" : [
+
+        ],
+        "pointIndexes" : [
+          [
+            6,
+            16,
+            26,
+            46,
+            74,
+            77,
+            84,
+            90,
+            13,
+            19
+          ],
+          [
+            6,
+            16,
+            26,
+            46,
+            74,
+            77,
+            84,
+            90,
+            13,
+            19
+          ]
+        ],
+        "maxPersonCount" : 2,
+        "triggerType" : 2,
+        "audio" : ""
+      },
+      "name" : "strongman",
+      "type" : "shape",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "showUtilFinish" : 0,
+        "alignY" : 32,
+        "width" : 135,
+        "alignX" : 67,
+        "audio" : "",
+        "alignAudio" : 0,
+        "type" : "D",
+        "frameDuration" : 50,
+        "folderName" : "sh",
+        "height" : 55,
+        "frames" : 1,
+        "scaleWidth" : 80,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          46
+        ],
+        "leftIndex" : 0,
+        "looping" : 1
+      },
+      "name" : "sh",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "showUtilFinish" : 0,
+        "alignY" : 65,
+        "width" : 257,
+        "alignX" : 125,
+        "audio" : "",
+        "alignAudio" : 0,
+        "type" : "D",
+        "frameDuration" : 50,
+        "folderName" : "face",
+        "height" : 134,
+        "frames" : 96,
+        "scaleWidth" : 130,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          46
+        ],
+        "leftIndex" : 0,
+        "looping" : 1
+      },
+      "name" : "face",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "showUtilFinish" : 0,
+        "alignY" : 109,
+        "width" : 720,
+        "alignX" : 370,
+        "audio" : "",
+        "alignAudio" : 0,
+        "type" : "D",
+        "frameDuration" : 50,
+        "folderName" : "tear",
+        "height" : 738,
+        "frames" : 96,
+        "scaleWidth" : 250,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          46
+        ],
+        "leftIndex" : 0,
+        "looping" : 1
+      },
+      "name" : "tear",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "showUtilFinish" : 0,
+        "alignY" : 150,
+        "width" : 253,
+        "alignX" : 127,
+        "audio" : "",
+        "alignAudio" : 0,
+        "type" : "D",
+        "frameDuration" : 50,
+        "folderName" : "ear",
+        "height" : 116,
+        "frames" : 96,
+        "scaleWidth" : 170,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          43
+        ],
+        "leftIndex" : 0,
+        "looping" : 1
+      },
+      "name" : "ear",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "showUtilFinish" : 0,
+        "alignY" : 95,
+        "width" : 600,
+        "alignX" : 305,
+        "audio" : "",
+        "alignAudio" : 0,
+        "type" : "D",
+        "frameDuration" : 50,
+        "folderName" : "bee",
+        "height" : 242,
+        "frames" : 96,
+        "scaleWidth" : 100,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          46
+        ],
+        "leftIndex" : 0,
+        "looping" : 1
+      },
+      "name" : "bee",
+      "type" : "dynamic",
+      "reload" : 1
+    }
+  ],
+  "initsection" : "bearcry",
+  "version" : 1,
+  "type" : "multi",
+  "statemachine" : [
+    {
+      "oldsection" : "bearcry",
+      "triggerType" : 1111,
+      "newsection" : "bearcry"
+    }
+  ],
+  "name" : "animal_bearcry_b",
+  "maxPersonCount" : 5
+}

@@ -1,0 +1,29 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 135,
+      "width" : 360,
+      "alignX" : 180,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "diaozhatian",
+      "height" : 190,
+      "frames" : 109,
+      "scaleWidth" : 160,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        43
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "diaozhatian",
+  "translateVersion" : 1
+}

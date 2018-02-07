@@ -1,0 +1,48 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 47,
+      "width" : 243,
+      "alignX" : 75,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "kouhong",
+      "height" : 366,
+      "frames" : 70,
+      "scaleWidth" : 160,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        98
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 165,
+      "width" : 308,
+      "alignX" : 158,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "toufa",
+      "height" : 283,
+      "frames" : 30,
+      "scaleWidth" : 160,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        44
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "menglu",
+  "translateVersion" : 1
+}

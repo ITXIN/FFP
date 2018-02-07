@@ -1,0 +1,48 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 37,
+      "width" : 210,
+      "alignX" : 105,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "saihong",
+      "height" : 70,
+      "frames" : 1,
+      "scaleWidth" : 110,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        46
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 310,
+      "width" : 360,
+      "alignX" : 180,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "lujiao",
+      "height" : 374,
+      "frames" : 20,
+      "scaleWidth" : 220,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        43
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "lujiao",
+  "translateVersion" : 1
+}

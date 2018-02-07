@@ -1,0 +1,212 @@
+{
+    "filterlist": [
+        {
+            "data": {
+                "audio": "",
+                "soundPlayMode": 0,
+                "foldername": "strongman",
+                "maxcount": 2,
+                "pointindexarray": [
+                    [
+                        6,
+                        16,
+                        26,
+                        46,
+                        74,
+                        77,
+                        84,
+                        90,
+                        13,
+                        19
+                    ],
+                    [
+                        6,
+                        16,
+                        26,
+                        46,
+                        74,
+                        77,
+                        84,
+                        90,
+                        13,
+                        19
+                    ]
+                ],
+                "reslist": [],
+                "resloadtype": 0,
+                "timeparam": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "triggerType": 2
+            },
+            "name": "strongman",
+            "reload": 1,
+            "type": "shapechange"
+        },
+        {
+            "data": {
+                "alignAudio": 0,
+                "audio": "",
+                "maxcount": 5,
+                "alignX": 67,
+            "alignY": 32,
+            "scaleWidth": 80,
+            "leftIndex": 0,
+            "rightIndex": 32,
+            "alignIndexLst": [
+                46
+            ],
+            "type": "D",
+            "width": 135,
+            "height": 55,
+            "frames": 1,
+            "folderName": "sh",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "sh",
+            "reload": 1,
+            "type": "dsticker"
+        },
+        {
+            "data": {
+                "alignAudio": 0,
+                "audio": "",
+                "maxcount": 5,
+                "alignX": 125,
+            "alignY": 65,
+            "scaleWidth": 130,
+            "leftIndex": 0,
+            "rightIndex": 32,
+            "alignIndexLst": [
+                46
+            ],
+            "type": "D",
+            "width": 257,
+            "height": 134,
+            "frames": 96,
+            "folderName": "face",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "face",
+            "reload": 1,
+            "type": "dsticker"
+        },
+        {
+            "data": {
+                "alignAudio": 0,
+                "audio": "",
+                "maxcount": 5,
+                "alignX": 370,
+            "alignY": 109,
+            "scaleWidth": 250,
+            "leftIndex": 0,
+            "rightIndex": 32,
+            "alignIndexLst": [
+                46
+            ],
+            "type": "D",
+            "width": 720,
+            "height": 738,
+            "frames": 96,
+            "folderName": "tear",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "tear",
+            "reload": 1,
+            "type": "dsticker"
+        },
+        {
+            "data": {
+                "alignAudio": 0,
+                "audio": "",
+                "maxcount": 5,
+                "alignX": 127,
+            "alignY": 150,
+            "scaleWidth": 170,
+            "leftIndex": 0,
+            "rightIndex": 32,
+            "alignIndexLst": [
+                43
+            ],
+            "type": "D",
+            "width": 253,
+            "height": 116,
+            "frames": 96,
+            "folderName": "ear",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "ear",
+            "reload": 1,
+            "type": "dsticker"
+        },
+        {
+            "data": {
+                "alignAudio": 0,
+                "audio": "",
+                "maxcount": 5,
+                "alignX": 305,
+            "alignY": 95,
+            "scaleWidth": 100,
+            "leftIndex": 0,
+            "rightIndex": 32,
+            "alignIndexLst": [
+                46
+            ],
+            "type": "D",
+            "width": 600,
+            "height": 242,
+            "frames": 96,
+            "folderName": "bee",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "bee",
+            "reload": 1,
+            "type": "dsticker"
+        }
+    ],
+    "initsection": "bearcry",
+    "sections": [
+        {
+            "duration": 0,
+            "filterlist": [
+                "strongman",
+                "sh",
+                "face",
+                "tear",
+                "ear",
+                "bee"
+            ],
+            "sectionname": "bearcry",
+            "tips": ""
+        }
+    ],
+    "statemachine": [
+        {
+            "oldsection": "bearcry",
+            "triggerType": 1111,
+            "newsection": "bearcry"
+        }
+    ]
+}

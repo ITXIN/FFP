@@ -1,0 +1,118 @@
+//mirror
+precision highp float;
+varying lowp vec2 textureCoordinate;
+
+uniform sampler2D inputImageTexture;
+uniform sampler2D inputImageTexture2;//chaplin
+uniform sampler2D inputImageTexture3;//chaplina
+uniform sampler2D inputImageTexture4;//exchangeface2D
+
+
+uniform lowp vec2 location0; // p_eyeRight
+uniform lowp vec2 location1; // p_eyeLeft
+uniform lowp vec2 location2; // p_browRight
+uniform lowp vec2 location3; // p_browLeft
+uniform lowp vec2 location4; // p_noseTip
+uniform lowp vec2 location5; // p_noseLeg
+uniform lowp vec2 location6; // p_mouthRight
+uniform lowp vec2 location7; // p_mouthLeft
+uniform lowp vec2 location8; // p_mouthTop
+uniform lowp vec2 location9; // p_mouthBottom
+uniform lowp vec2 location10;// p_chin
+uniform lowp vec2 location11;// p_faceRight1
+uniform lowp vec2 location12;// p_faceLeft1
+uniform lowp vec2 location13;// p_faceRight2
+uniform lowp vec2 location14;// p_faceLeft2
+uniform lowp vec2 location15;// p_faceRight3
+uniform lowp vec2 location16;// p_faceLeft3
+uniform lowp vec2 location17;// p_faceRight4
+uniform lowp vec2 location18;// p_faceLeft4
+uniform lowp vec2 location19;// p_faceRight5
+uniform lowp vec2 location20;// p_faceLeft5
+uniform lowp vec2 location21;// p_faceRight6
+uniform lowp vec2 location22;// p_faceLeft6
+uniform lowp vec2 location23;// p_faceRight7
+uniform lowp vec2 location24;// p_faceLeft7
+
+
+
+uniform lowp vec2 angle0;
+
+uniform int m_orientation;
+uniform bool isAndroid;
+
+
+vec4 blendNormal(vec4 c1, vec4 c2) {
+vec4 outputColor;
+outputColor.r = c1.r + c2.r * c2.a * (1.0 - c1.a);
+outputColor.g = c1.g + c2.g * c2.a * (1.0 - c1.a);
+outputColor.b = c1.b + c2.b * c2.a * (1.0 - c1.a);
+outputColor.a = c1.a + c2.a * (1.0 - c1.a);
+return outputColor;
+}
+
+
+vec2 flowAway(vec2 realCoord, vec2 scrSize, vec2 facePoint, vec2 angle, vec2 weiyi, vec2 faceSize, vec2 pngSize, float radius, float amp, vec2 originPosition)
+{
+vec2 facePointA = facePoint * scrSize;
+vec2 facePointAfter = vec2(0.0);
+facePointAfter.x = angle.y * facePointA.x + angle.x * facePointA.y;
+facePointAfter.y = angle.y * facePointA.y - angle.x * facePointA.x;
+facePointAfter += weiyi;
+facePointAfter /= faceSize;
+
+vec2 direction = facePointAfter - originPosition;
+float lengthA = length(direction);
+float lengthB = min(lengthA, radius);
+direction *= amp * lengthB / lengthA;
+float infect = distance(realCoord*pngSize,originPosition*pngSize)/radius;
+infect = clamp(1.0-infect, 0.0, 1.0);
+infect  = pow(infect, 2.0);
+
+return direction * infect;
+}
+
+vec2 faceStretch(vec2 textureCoord, vec2 originPosition, vec2 targetPosition, float radius, float amp, float curve)
+{
+vec2 direction = targetPosition - originPosition;
+float lengthA = length(direction);
+float lengthB = min(lengthA, radius);
+direction *= amp * lengthB / lengthA;
+float infect = distance(textureCoord, originPosition)/radius;
+infect = clamp(1.0-infect,0.0,1.0);
+infect = pow(infect, curve);
+
+return direction * infect;
+}
+
+void main(){
+
+/*
+gl_FragColor = texture2D(inputImageTexture,textureCoordinate);
+
+if(location0.x < 0.01 && location1.x < 0.01)
+{
+gl_FragColor = texture2D(inputImageTexture,textureCoordinate);
+return;
+}
+*/
+//==========
+float gate = 0.02;
+if(textureCoordinate.x < 0.5-gate)
+{
+gl_FragColor = texture2D(inputImageTexture,textureCoordinate);
+}
+else if(textureCoordinate.x < 0.5+gate)
+{
+float weight = (textureCoordinate.x + gate - 0.5) / (2.0 * gate);
+vec4 color1 = texture2D(inputImageTexture,textureCoordinate);
+vec4 color2 = texture2D(inputImageTexture,vec2(1.0 - textureCoordinate.x, textureCoordinate.y));
+gl_FragColor = mix(color1, color2, weight);
+}
+else
+{
+gl_FragColor = texture2D(inputImageTexture,vec2(1.0 - textureCoordinate.x, textureCoordinate.y));
+}
+
+}
+

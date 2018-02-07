@@ -1,0 +1,53 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 230,
+      "width" : 360,
+      "alignX" : 180,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "mj",
+      "height" : 423,
+      "frames" : 22,
+      "scaleWidth" : 180,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        46
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "height" : 640,
+      "frames" : 22,
+      "looping" : 1,
+      "showTop" : 0,
+      "width" : 360,
+      "frameDuration" : 50,
+      "folderName" : "jian",
+      "showUtilFinish" : 1,
+      "type" : "V",
+      "triggerType" : 2
+    },
+    {
+      "height" : 305,
+      "frames" : 47,
+      "looping" : 1,
+      "showTop" : 0,
+      "width" : 360,
+      "frameDuration" : 50,
+      "folderName" : "tc",
+      "showUtilFinish" : 1,
+      "type" : "V",
+      "triggerType" : 2
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "dswd",
+  "translateVersion" : 1
+}

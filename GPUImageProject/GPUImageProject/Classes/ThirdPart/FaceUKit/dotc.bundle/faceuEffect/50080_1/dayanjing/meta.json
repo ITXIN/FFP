@@ -1,0 +1,29 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 50,
+      "width" : 258,
+      "alignX" : 125,
+      "type" : "D",
+      "frameDuration" : 40,
+      "folderName" : "dayanjing",
+      "height" : 115,
+      "frames" : 30,
+      "scaleWidth" : 220,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        43
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "dayanjing",
+  "translateVersion" : 1
+}

@@ -1,0 +1,41 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 120,
+      "width" : 300,
+      "alignX" : 150,
+      "type" : "D",
+      "frameDuration" : 60,
+      "folderName" : "tou",
+      "height" : 113,
+      "frames" : 1,
+      "scaleWidth" : 220,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        43
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "height" : 480,
+      "frames" : 71,
+      "looping" : 1,
+      "showTop" : 0,
+      "width" : 360,
+      "frameDuration" : 60,
+      "folderName" : "shou",
+      "showUtilFinish" : 1,
+      "type" : "V",
+      "triggerType" : 2
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "lanqiu",
+  "translateVersion" : 1
+}

@@ -1,0 +1,48 @@
+{
+  "position" : 4000,
+  "filters" : [
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 60,
+      "width" : 242,
+      "alignX" : 121,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "saihong",
+      "height" : 121,
+      "frames" : 1,
+      "scaleWidth" : 200,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        46
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    },
+    {
+      "triggerType" : 2,
+      "showUtilFinish" : 1,
+      "alignY" : 60,
+      "width" : 245,
+      "alignX" : 90,
+      "type" : "D",
+      "frameDuration" : 50,
+      "folderName" : "yanjing",
+      "height" : 100,
+      "frames" : 46,
+      "scaleWidth" : 190,
+      "rightIndex" : 32,
+      "alignIndexLst" : [
+        43
+      ],
+      "leftIndex" : 0,
+      "looping" : 1
+    }
+  ],
+  "version" : 1,
+  "maxPersonCount" : 5,
+  "type" : "dynamic",
+  "name" : "weisuo",
+  "translateVersion" : 1
+}

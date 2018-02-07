@@ -1,0 +1,182 @@
+{
+  "translateVersion" : 1,
+  "position" : 4000,
+  "sections" : [
+    {
+      "filterlist" : [
+        "strongman",
+        "er",
+        "foot",
+        "nose",
+        "bg"
+      ],
+      "tips" : "",
+      "sectionname" : "catfoot",
+      "duration" : -1
+    }
+  ],
+  "filters" : [
+    {
+      "data" : {
+        "audioPlayMode" : 0,
+        "resloadtype" : 0,
+        "glsl" : "glsl",
+        "timeparam" : [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "foldername" : "strongman",
+        "resources" : [
+
+        ],
+        "pointIndexes" : [
+          [
+            9,
+            16,
+            23,
+            46,
+            74,
+            77,
+            84,
+            90
+          ],
+          [
+            5,
+            16,
+            27,
+            46,
+            74,
+            77,
+            84,
+            90
+          ]
+        ],
+        "maxPersonCount" : 2,
+        "triggerType" : 2,
+        "audio" : ""
+      },
+      "name" : "strongman",
+      "type" : "shape",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "showUtilFinish" : 0,
+        "alignY" : 125,
+        "width" : 251,
+        "alignX" : 127,
+        "audio" : "",
+        "alignAudio" : 0,
+        "type" : "D",
+        "frameDuration" : 50,
+        "folderName" : "er",
+        "height" : 112,
+        "frames" : 14,
+        "scaleWidth" : 160,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          43
+        ],
+        "leftIndex" : 0,
+        "looping" : 1
+      },
+      "name" : "er",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "showUtilFinish" : 0,
+        "alignY" : 90,
+        "width" : 322,
+        "alignX" : 161,
+        "audio" : "",
+        "alignAudio" : 0,
+        "type" : "D",
+        "frameDuration" : 50,
+        "folderName" : "foot",
+        "height" : 318,
+        "frames" : 56,
+        "scaleWidth" : 200,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          16
+        ],
+        "leftIndex" : 0,
+        "looping" : 1
+      },
+      "name" : "foot",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "showUtilFinish" : 0,
+        "alignY" : 63,
+        "width" : 240,
+        "alignX" : 120,
+        "audio" : "",
+        "alignAudio" : 0,
+        "type" : "D",
+        "frameDuration" : 50,
+        "folderName" : "nose",
+        "height" : 127,
+        "frames" : 24,
+        "scaleWidth" : 200,
+        "rightIndex" : 32,
+        "alignIndexLst" : [
+          46
+        ],
+        "leftIndex" : 0,
+        "looping" : 1
+      },
+      "name" : "nose",
+      "type" : "dynamic",
+      "reload" : 1
+    },
+    {
+      "data" : {
+        "showUtilFinish" : 0,
+        "width" : 360,
+        "audio" : "",
+        "alignAudio" : 0,
+        "showTop" : 1,
+        "type" : "V",
+        "folderName" : "bg",
+        "height" : 640,
+        "frames" : 56,
+        "frameDuration" : 50,
+        "triggerType" : 2,
+        "maxPersonCount" : 5,
+        "looping" : 1
+      },
+      "name" : "bg",
+      "type" : "dynamic",
+      "reload" : 1
+    }
+  ],
+  "initsection" : "catfoot",
+  "version" : 1,
+  "type" : "multi",
+  "statemachine" : [
+    {
+      "oldsection" : "catfoot",
+      "triggerType" : 1111,
+      "newsection" : "catfoot"
+    }
+  ],
+  "name" : "animal_catfoot_b",
+  "maxPersonCount" : 5
+}
