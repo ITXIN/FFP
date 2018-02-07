@@ -40,6 +40,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    
     self.videoPreview = [[FFVideoPreview alloc]initWithFrame:self.view.bounds];
     self.videoPreview.videoPreviewDelegate = self;
     [self.view addSubview:self.videoPreview];
