@@ -113,6 +113,9 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
     self.videoCamera.delegate = self;
     [self.videoCamera addAudioInputsAndOutputs]; //该句可防止允许声音通过的情况下，避免录制第一帧黑屏闪屏
     
+    
+
+    
 //    AVCaptureMetadataOutput *metaDataOutput = self.videoCamera.captureSession.outputs[0];
 //    dispatch_queue_t videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
 ////    [metadDataOutput setMetadataObjectsDelegate:self queue:videoDataOutputQueue];
@@ -145,7 +148,11 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
     
     {
 //        AVCaptureMetadataOutput *metaDataOutput = self.videoCamera.captureSession.outputs[0];
+        
 //        [metaDataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
+//        self.videoCamera.captureSession.output
+       
+    
     }
 //    resBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"dotc" ofType:@"bundle"]];
 
@@ -159,7 +166,9 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
 
     [self initFaceView];
 
-    [self setupFaceuDic];
+    
+
+//    [self setupFaceuDic];
     
 //    [[FFVideoManager sharedInstance]createTimerActionTypeBlock:^{
 //        [self detectorAction];

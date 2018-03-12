@@ -83,9 +83,6 @@
     });
 }
 
-
-
-
 - (void)setupLayoutSubviews{
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.contentView);

@@ -293,12 +293,15 @@
 //    CGImageRelease(videoImage);
 //    return result;
     
+    
+    
+   
     {
-//        CVImageBufferRef buffer;
        CVImageBufferRef buffer = CMSampleBufferGetImageBuffer(sampleBuffer);
         
         CVPixelBufferLockBaseAddress(buffer, 0);
-        uint8_t *base;
+//        uint8_t *base;
+        void *base;
         size_t width, height, bytesPerRow;
         base = CVPixelBufferGetBaseAddress(buffer);
         width = CVPixelBufferGetWidth(buffer);
@@ -326,7 +329,7 @@
 //        來源：简书
 //        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
     }
-    
+   
     
     
     
