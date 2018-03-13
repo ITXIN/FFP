@@ -29,13 +29,9 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
 
 @interface FFVideoPreview ()<UIGestureRecognizerDelegate,GPUImageVideoCameraDelegate,AVCaptureMetadataOutputObjectsDelegate>
 {
-    GPUImageAlphaBlendFilter *currentBlendFilter;
-
     NSBundle    *resBundle;
     CMSampleBufferRef currentSampleBuffer;
 }
-
-//@property (nonatomic,strong) FFWaterView *waterView;
 @property (nonatomic,strong) UIImageView* mouth;
 @property (nonatomic,strong) UIImageView* leftEye;
 @property (nonatomic,strong) UIImageView* rightEye;
@@ -113,14 +109,16 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
     self.videoCamera.delegate = self;
     [self.videoCamera addAudioInputsAndOutputs]; //该句可防止允许声音通过的情况下，避免录制第一帧黑屏闪屏
     
+ 
     
 
     
 //    AVCaptureMetadataOutput *metaDataOutput = self.videoCamera.captureSession.outputs[0];
+    
 //    dispatch_queue_t videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
 ////    [metadDataOutput setMetadataObjectsDelegate:self queue:videoDataOutputQueue];
 //    NSArray* supportTypes = metaDataOutput.availableMetadataObjectTypes;
-//    //NSLog(@"supports:%@",supportTypes);
+//    NSLog(@"supports:%@",supportTypes);
 //    if ([supportTypes containsObject:AVMetadataObjectTypeFace]) {
 //        [metaDataOutput setMetadataObjectTypes:@[AVMetadataObjectTypeFace]];
 //        [metaDataOutput setMetadataObjectsDelegate:self queue:videoDataOutputQueue];
@@ -141,19 +139,13 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
         [device setSubjectAreaChangeMonitoringEnabled:YES];
         [device unlockForConfiguration];
     }
+    
     if (device.isSubjectAreaChangeMonitoringEnabled) {
         //自动对焦
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(subjectAreaDidChange:)name:AVCaptureDeviceSubjectAreaDidChangeNotification object:device];
     }
     
-    {
-//        AVCaptureMetadataOutput *metaDataOutput = self.videoCamera.captureSession.outputs[0];
-        
-//        [metaDataOutput setVideoSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
-//        self.videoCamera.captureSession.output
-       
-    
-    }
+   
 //    resBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"dotc" ofType:@"bundle"]];
 
     
@@ -166,7 +158,17 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
 
     [self initFaceView];
 
-    
+//    {
+//
+//        AVCaptureVideoDataOutput *output = [[[self.videoCamera captureSession] outputs] lastObject];
+//        //        output.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:
+//        //                                [NSNumber numberWithInt:kCVPixelFormatType_32BGRA], kCVPixelBufferPixelFormatTypeKey,
+//        //                                [NSNumber numberWithInt: 640], (id)kCVPixelBufferWidthKey,
+//        //                                [NSNumber numberWithInt: 480], (id)kCVPixelBufferHeightKey,
+//        //                                nil];
+//        output.videoSettings = [NSDictionary dictionaryWithObject: [NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey: (id)kCVPixelBufferPixelFormatTypeKey];
+//
+//    }
 
 //    [self setupFaceuDic];
     
@@ -243,8 +245,8 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
 - (void)takePhoto{
     //定格一张图片 保存到相册 GPUImageStillCamera
     GPUImageOutput<GPUImageInput>*output = nil;
-    if (currentBlendFilter) {
-        output = currentBlendFilter;
+    if (self.currentBlendFilter) {
+        output = self.currentBlendFilter;
     }else if(self.currentFilter){
         output = self.currentFilter;
     }
@@ -286,8 +288,8 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
     [[NSFileManager defaultManager]removeItemAtURL:self.movieURL error:nil];
     
     self.videoCamera.audioEncodingTarget = self.movieWriter;
-    if (currentBlendFilter) {
-        [currentBlendFilter addTarget:self.movieWriter];
+    if (self.currentBlendFilter) {
+        [self.currentBlendFilter addTarget:self.movieWriter];
     }else{
         if (self.currentFilter) {
             [self.currentFilter addTarget:self.movieWriter];
@@ -300,8 +302,8 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
 - (void)endRecordVideo{
     FFLOG(@"endRecordVideo");
     self.videoCamera.audioEncodingTarget = nil;
-    if (currentBlendFilter) {
-        [currentBlendFilter removeTarget:self.movieWriter];
+    if (self.currentBlendFilter) {
+        [self.currentBlendFilter removeTarget:self.movieWriter];
     }else{
         if (self.currentFilter) {
             [self.currentFilter removeTarget:self.movieWriter];
@@ -322,7 +324,7 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
     }
     self.currentFilter = filter;
     self.currentWaterMark = waterMark;
-    currentBlendFilter = nil;
+    self.currentBlendFilter = nil;
     if (filter && waterMark) {
         self.currentWaterMark = waterMark;
         [self.videoCamera addTarget:filter];
@@ -332,7 +334,7 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
     }else{
         if (filter) {
             FFLOG(@" filter");
-            currentBlendFilter = nil;
+            self.currentBlendFilter = nil;
             [self.videoCamera addTarget:filter];
             [filter addTarget:self.filterView];
             [filter useNextFrameForImageCapture];//解决崩溃  CVPixelBufferCreate error.
@@ -342,6 +344,7 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
             self.currentWaterMark = waterMark;
             FFVideoFilterModel *filterModel = (FFVideoFilterModel*)self.filterArr[0];
             GPUImageOutput<GPUImageInput> *pixellaterFiler =  filterModel.filter;
+            
             self.currentFilter = pixellaterFiler;
             [self configeWaterMarkWithFilter:pixellaterFiler];
         }
@@ -362,7 +365,8 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
     [uiElementInput addTarget:blendFilter];
     [blendFilter addTarget:self.filterView];
     
-    currentBlendFilter = blendFilter;
+    self.currentBlendFilter = blendFilter;
+    
     [filter useNextFrameForImageCapture];
     [uiElementInput useNextFrameForImageCapture];//解决崩溃
     
@@ -395,8 +399,20 @@ static NSString * _Nonnull const LFBeautyBase           = @"faceuEffect/new_beau
 #pragma mark - GPUImageVideoCameraDelegate
 - (void)willOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer{
     if (sampleBuffer) {
+//        {
+//
+//            AVCaptureVideoDataOutput *output = [[[self.videoCamera captureSession] outputs] lastObject];
+//            //        output.videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:
+//            //                                [NSNumber numberWithInt:kCVPixelFormatType_32BGRA], kCVPixelBufferPixelFormatTypeKey,
+//            //                                [NSNumber numberWithInt: 640], (id)kCVPixelBufferWidthKey,
+//            //                                [NSNumber numberWithInt: 480], (id)kCVPixelBufferHeightKey,
+//            //                                nil];
+//            output.videoSettings = [NSDictionary dictionaryWithObject: [NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey: (id)kCVPixelBufferPixelFormatTypeKey];
+//
+//        }
+        
         currentSampleBuffer = sampleBuffer;
-        [self detectorAction];
+//        [self detectorAction];
     }
 }
 #pragma mark -

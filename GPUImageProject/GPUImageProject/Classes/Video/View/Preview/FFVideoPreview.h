@@ -25,7 +25,7 @@
 @property (nonatomic,strong) GPUImageMovieWriter * movieWriter;
 @property (nonatomic,strong) GPUImageOutput<GPUImageInput> *currentFilter;
 @property (nonatomic,strong) FFVideoWaterMarkModel *currentWaterMark;
-
+@property (nonatomic,strong) GPUImageAlphaBlendFilter *currentBlendFilter;
 @property (nonatomic,strong) NSMutableArray *filterArr;
 @property (nonatomic,strong) NSMutableArray *wateMarkArr;
 
