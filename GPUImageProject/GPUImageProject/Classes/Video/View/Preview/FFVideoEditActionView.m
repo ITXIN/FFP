@@ -628,7 +628,7 @@ static CGFloat bottomHeaderHeight = 50;
 }
 #pragma mark -
 #pragma mark --- UICollectionViewDelegateFlowLayout
-//如果这个偏移没有超过屏幕宽度减去itemsize ，那么列间距自动适应
+//如果这个偏移没有超过屏幕宽度减去itemsize ，那么列间距自动适应.总的来说是间距是不累加的
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     
