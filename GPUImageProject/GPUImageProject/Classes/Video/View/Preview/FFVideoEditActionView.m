@@ -628,21 +628,24 @@ static CGFloat bottomHeaderHeight = 50;
 }
 #pragma mark -
 #pragma mark --- UICollectionViewDelegateFlowLayout
+//如果这个偏移没有超过屏幕宽度减去itemsize ，那么列间距自动适应
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     
-    return UIEdgeInsetsMake(5, 5, 0, 5);
+//    return UIEdgeInsetsMake(5, 5, 0, 5);
+    return UIEdgeInsetsMake(10, 10, 10, 10);
 }
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
-    return 5;
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
-    return 10;
-}
+//列间距
+//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+//{
+////    return 5;
+//    return 10;
+//}
+//行间距
+//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+//{
+//    return 10;
+//}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
