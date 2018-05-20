@@ -21,7 +21,7 @@
 //    UINavigationController *navigC = [[UINavigationController alloc]initWithRootViewController:[[FFVideoViewController alloc]init]];
     
     self.window.rootViewController = [[FFVideoViewController alloc]init];
-                                      
+    
     return YES;
 }
 
